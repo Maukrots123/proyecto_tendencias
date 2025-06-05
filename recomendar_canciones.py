@@ -44,10 +44,7 @@ def recomendar_por_ciudad_para_iframe(id_usuario, nombre_usuario, ciudad_usuario
     html_output.append(u"<head>")
     html_output.append(u"<meta charset='utf-8'>")
     html_output.append(u"<title>Recomendaciones</title>")
-    # Puedes incluir aquí un enlace a un CSS específico para la tabla dentro del iframe
-    # Por ejemplo: html_output.append(u"<link rel='stylesheet' href='../assets/css/main.css'>")
-    # O mejor aún, si los estilos están en main.css y el iframe usa el mismo, ya se aplicarán.
-    # Si quieres estilos específicos para el iframe que no están en el index, ponlos aquí:
+  
     html_output.append(u"<style>")
     html_output.append(u"    body { font-family: Arial, sans-serif; margin: 20px; background-color: #f8f8f8; }")
     html_output.append(u"    table { width: 100%; border-collapse: collapse; margin-top: 1.5em; font-size: 1em; color: #333; }")
