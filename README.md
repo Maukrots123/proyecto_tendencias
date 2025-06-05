@@ -1,9 +1,9 @@
-✨ Mi Recomendador Musical con Cassandra y Python ✨
+# ✨ Mi Recomendador Musical con Cassandra y Python ✨
 Este proyecto es un sistema de recomendación de música y análisis de datos diseñado e implementado con Apache Cassandra 
 como base de datos NoSQL y Python 2.7 para la lógica de la aplicación. Su objetivo es demostrar cómo se pueden generar 
 recomendaciones básicas de canciones y realizar análisis OLAP simplificados sobre el historial de escuchas.
 
-🚀 Características Principales
+# 🚀 Características Principales
 Modelado de Datos NoSQL: Esquema simplificado en Cassandra para almacenar información de usuarios, canciones y escuchas.
 Recomendación de Música Básica: Implementación de un algoritmo simple para sugerir canciones.
 Análisis OLAP Simplificado: Procesamiento analítico en línea para explorar tendencias de escuchas por género y tiempo.
@@ -11,7 +11,7 @@ Generación de Reportes Web: Los resultados de las recomendaciones y el análisi
 accesibles desde una página web principal.
 
 
-⚙️ Cómo Empezar
+# ⚙️ Cómo Empezar
 Sigue estos pasos para configurar y ejecutar el proyecto en tu máquina local.
 
 Prerrequisitos
@@ -23,7 +23,7 @@ Librerías de Python: Instala el controlador de Cassandra para Python:
 
 - pip install cassandra-driver
 
-📦 Configuración de la Base de Datos Cassandra
+# 📦 Configuración de la Base de Datos Cassandra
 Inicia tu servidor Cassandra: Si Cassandra no está en ejecución, inícialo. En Windows, 
 puedes hacerlo desde el directorio bin de tu 
 instalación de Cassandra:
@@ -57,14 +57,18 @@ exit;
 (Nota: Las tablas escuchas_genero_diarias y recomendaciones_generadas se generarán dinámicamente 
 cuando ejecutes los scripts de la aplicación si no existen, o se actualizarán si ya tienen datos).
 
-💻 Ejecutar la Aplicación
+# 💻 Ejecutar la Aplicación
 Genera los reportes HTML:
 Abre una terminal y navega a la carpeta app/ de tu proyecto.
 Ejecuta los scripts de Python para generar los archivos HTML que se mostrarán en la web. Estos scripts interactuarán con 
-Cassandra para procesar y actualizar los datos:
+Cassandra para procesar y actualizar los datos: analisis_olap.py como tambien python recomendar_canciones.py
 
-python analisis_olap.py
-python recomendar_canciones.py
+Para poder ejecutar los archivos python te recomiendo escribirlos de esta forma en la terminal de tu editor de codigo:
+
+py -2 recomendar_canciones.py
+py -2 analisis_olap.py
+
+Para que se ejecuten con la version 2.7 de tu python
 
 - Abre la aplicación web:
 Una vez que los scripts hayan terminado de ejecutarse y hayan generado o actualizado los archivos HTML, 
