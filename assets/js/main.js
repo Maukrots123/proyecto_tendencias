@@ -252,6 +252,8 @@ var settings = {
 
 	};
 
+	
+
 	$(function() {
 
 		var	$window 	= $(window),
