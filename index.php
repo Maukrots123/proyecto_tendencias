@@ -1,13 +1,5 @@
 <?php 
-
-// --- INICIO Bloque de Depuración para identificar la fuente del error ---
-error_reporting(E_ALL);         // Reporta todos los errores
-ini_set('display_errors', 1);   // Muestra los errores en el navegador
-ini_set('display_startup_errors', 1); // Muestra errores de inicio
-ob_start(); // Opcional, pero ayuda a atrapar más errores de salida si el problema no es un simple espacio.
-// --- FIN Bloque de Depuración ---
 include("session.php"); 
-
 ?>
 
 
@@ -37,7 +29,7 @@ include("session.php");
     <?php endif; ?>
 
     <?php if ($rol == 2): ?>
-      <li><a href="chatbot.php">Chatbot</a></li>
+      <li><a href="presentacion.php">Chatbot</a></li>
     <?php endif; ?>
 
     <?php if ($rol == 1): ?>
@@ -75,7 +67,8 @@ include("session.php");
     <li><a href="#footer">Acerca de</a></li>
 
     <?php if ($usuario): ?>
-      <li><a href="cerrar_sesion.php">Cerrar sesión (<?= htmlspecialchars($usuario) ?>)</a></li>
+        <li><a href="cerrar_sesion.php"><i class="fa fa-user"></i> Cerrar sesión (<?= htmlspecialchars($usuario) ?>)</a></li>
+
     <?php endif; ?>
   </ul>
 </nav>
@@ -209,7 +202,7 @@ include("session.php");
     </div>
 </section>
 
-
+   <?php if (!$usuario): ?>
      <section id="login" class="login-section">
   <h2>Iniciar Sesión</h2>
   <form action="login.php" method="POST">
@@ -222,7 +215,7 @@ include("session.php");
     <button type="submit">Entrar</button>
   </form>
 </section>
-
+   <?php endif; ?>
 
     <footer id="footer">
         <div class="container">
