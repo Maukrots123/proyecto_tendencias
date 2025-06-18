@@ -64,7 +64,7 @@ include("session.php");
       </ul>
     </li>
 
-    <li><a href="#footer">Acerca de</a></li>
+    <li><a href="#acerca de">Acerca de</a></li>
 
     <?php if ($usuario): ?>
         <li><a href="cerrar_sesion.php"><i class="fa fa-user"></i> Cerrar sesión (<?= htmlspecialchars($usuario) ?>)</a></li>
@@ -183,7 +183,7 @@ include("session.php");
         </div>
     </section>
 
-      <section class="wrapper style2">
+      <section id= "acerca de" class="wrapper style2">
     <div class="inner">
         <header class="align-center">
             <h2>¿Qué es el Servicio Comunitario en la UNEG?</h2>
@@ -203,6 +203,7 @@ include("session.php");
 </section>
 
    <?php if (!$usuario): ?>
+
      <section id="login" class="login-section">
   <h2>Iniciar Sesión</h2>
   <form action="login.php" method="POST">
